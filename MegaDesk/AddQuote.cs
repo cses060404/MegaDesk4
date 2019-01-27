@@ -53,31 +53,29 @@ namespace MegaDesk
         private void tbWidth_Validating(object sender, CancelEventArgs e)
         {
             string errorMsg;
-            if (!int.TryParse(tbWidth.Text, out int realWidth))
+            if (tbWidth.Text.Length == 0 || cancelButtonClicked == true)
+            {
+                e.Cancel = false;
+            }
+
+            else if (!int.TryParse(tbWidth.Text, out int realWidth))
             {
                 e.Cancel = true;
                 errorMsg = "Width must be an integer!";
                 MessageBox.Show(errorMsg);
                 tbWidth.Select(0, tbWidth.Text.Length);
-
             }
-            else
+
+            else if (!(realWidth >= 24 && realWidth <= 96))
             {
-                if (!(realWidth >= 24 && realWidth <= 96))
-                {
-                    e.Cancel = true;
-                    errorMsg = "Width must be between 24 to 96 inches!";
-                    MessageBox.Show(errorMsg);
-                    tbWidth.Select(0, tbWidth.Text.Length);
-                }
-
-                else if (cancelButtonClicked)
-                {
-                    e.Cancel = false;
-                    cancelButtonClicked = false;
-                }
+                e.Cancel = true;
+                errorMsg = "Width must be between 24 to 96 inches!";
+                MessageBox.Show(errorMsg);
+                tbWidth.Select(0, tbWidth.Text.Length);
             }
+
         }
+            
 
         private void tbDepth_KeyDown(object sender, KeyEventArgs e)
         {

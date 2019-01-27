@@ -51,7 +51,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(78, 136);
+            this.button2.Location = new System.Drawing.Point(78, 127);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(224, 79);
             this.button2.TabIndex = 1;
@@ -62,7 +62,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(78, 237);
+            this.button3.Location = new System.Drawing.Point(78, 225);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(224, 79);
             this.button3.TabIndex = 2;
@@ -73,7 +73,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(78, 334);
+            this.button4.Location = new System.Drawing.Point(78, 323);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(224, 79);
             this.button4.TabIndex = 3;
@@ -84,7 +84,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(467, 136);
+            this.pictureBox1.Location = new System.Drawing.Point(470, 127);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(270, 261);
             this.pictureBox1.TabIndex = 4;
