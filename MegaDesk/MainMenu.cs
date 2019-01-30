@@ -50,10 +50,5 @@ namespace MegaDesk
         {
             Application.Exit();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
