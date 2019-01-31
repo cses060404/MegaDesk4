@@ -20,10 +20,14 @@ namespace MegaDesk
         const decimal GRETERTHAN2000INFIVEDAYS = 60M;
         const decimal GRETERTHAN2000INSEVENDAYS = 40M;
 
-
+        const decimal OAK = 200M;
+        const decimal LAMINATE = 100M;
+        const decimal PINE = 50M;
+        const decimal ROSEWOOD = 300M;
+        const decimal VENEER = 125M;
         const decimal DRAWERS = 50M;
 
-
+        const decimal BASEPRICE = 200M;
 
         public enum Delivery {
             Rush3Days = 0,
@@ -33,7 +37,7 @@ namespace MegaDesk
         }
 
 
-        public decimal totalPrice { get; set; } = 200M;
+        public decimal totalPrice { get; set; }
         public Desk desk = new Desk();
         public string customerName { get; set; }
         public DateTime QuoteDate { get; set; }
@@ -41,6 +45,10 @@ namespace MegaDesk
 
 
         public void CalCost() {
+            // Adding the base price
+            totalPrice = 0M;
+            totalPrice += BASEPRICE;
+
             int area = desk.Width * desk.Depth;
             // Adding the fee if area exceed 1000 square inch.
             if (area > 1000) { 
@@ -73,19 +81,19 @@ namespace MegaDesk
             switch (desk.Material)
             {
                 case Desk.Surface.Oak:
-                    totalPrice += 200M;
+                    totalPrice += OAK;
                     break;
                 case Desk.Surface.Laminate:
-                    totalPrice += 100M;
+                    totalPrice += LAMINATE;
                     break;
                 case Desk.Surface.Pine:
-                    totalPrice += 50M;
+                    totalPrice += PINE;
                     break;
                 case Desk.Surface.Rosewood:
-                    totalPrice += 300M;
+                    totalPrice += ROSEWOOD;
                     break;
                 case Desk.Surface.Veneer:
-                    totalPrice += 125M;
+                    totalPrice += VENEER;
                     break;
             }
         }

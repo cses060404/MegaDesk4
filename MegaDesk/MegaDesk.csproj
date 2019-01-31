@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ShowQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowQuote.Designer.cs">
+      <DependentUpon>ShowQuote.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddQuote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="ViewAllQuotes.Designer.cs">
       <DependentUpon>ViewAllQuotes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowQuote.resx">
+      <DependentUpon>ShowQuote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddQuote.resx">
       <DependentUpon>AddQuote.cs</DependentUpon>
     </EmbeddedResource>
