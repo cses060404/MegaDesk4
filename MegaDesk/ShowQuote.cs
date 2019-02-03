@@ -14,18 +14,18 @@ namespace MegaDesk
     public partial class ShowQuote : Form
     {
         ErrorProvider errorProvider1 = new ErrorProvider();
-        DeskQuote newQuote = new DeskQuote();
+        
 
-        public ShowQuote()
+        public ShowQuote(DeskQuote deskQuote)
         {
             InitializeComponent();
-            widthBox.Text = AddQuote.width;
-            depthBox.Text = AddQuote.depth;
-            drawerBox.Text = AddQuote.drawerNum;
-            rushBox.Text = AddQuote.rushDay;
-            materialBox.Text = AddQuote.material;
-            nameBox.Text = AddQuote.customerName;
-            priceBox.Text = AddQuote.totalPrice;
+            widthBox.Text = deskQuote.desk.Width.ToString();
+            depthBox.Text = deskQuote.desk.Depth.ToString();
+            drawerBox.Text = deskQuote.desk.DrawerNum.ToString();
+            rushBox.Text = deskQuote.DeliveryType.ToString();
+            materialBox.Text = deskQuote.desk.Material.ToString();
+            nameBox.Text = deskQuote.customerName;
+            priceBox.Text = deskQuote.totalPrice.ToString();
             
         }
 
@@ -45,6 +45,7 @@ namespace MegaDesk
         {
             string quoteDetail = nameBox.Text + ", " + rushBox.Text + ", "
                 + materialBox.Text + ", " + drawerBox.Text + ", "+ depthBox.Text + ", " + widthBox.Text + Environment.NewLine;
+
             File.AppendAllText("OrderDetail.txt",quoteDetail);
 
             var addQuoteView = (AddQuote)Tag;

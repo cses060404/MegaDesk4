@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace MegaDesk
 {
-    class DeskQuote
+    public class DeskQuote
     {
         const decimal LESSTHAN1000INTHREEDAYS = 60M;
         const decimal LESSTHAN1000INFIVEDAYS = 40M;
-        const decimal LESSTHAN1000INSEVENDAYS = 40M;
+        const decimal LESSTHAN1000INSEVENDAYS = 30M;
 
         const decimal BETWEEN1000AND2000INTHREEDAYS = 70M;
         const decimal BETWEEN1000AND2000INFIVEDAYS = 50M;
-        const decimal BETWEEN1000AND2000INSEVENDAYS = 50M;
+        const decimal BETWEEN1000AND2000INSEVENDAYS = 35M;
 
         const decimal GRETERTHAN2000INTHREEDAYS = 80M;
         const decimal GRETERTHAN2000INFIVEDAYS = 60M;
@@ -62,7 +62,7 @@ namespace MegaDesk
                     if (area < 1000) { totalPrice += LESSTHAN1000INTHREEDAYS; }
                     else if (area >= 1000 && area < 2000) { totalPrice += BETWEEN1000AND2000INTHREEDAYS; }
                     else totalPrice += GRETERTHAN2000INTHREEDAYS;
-                        break;
+                    break;
                 case Delivery.Rush5Days:
                     if (area < 1000) { totalPrice += LESSTHAN1000INFIVEDAYS; }
                     else if (area >= 1000 && area < 2000) { totalPrice += BETWEEN1000AND2000INFIVEDAYS; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace MegaDesk
         public DisplayQuote()
         {
             InitializeComponent();
+            loadGrid();
         }
 
         private void DisplayQuote_Load(object sender, EventArgs e)
@@ -27,6 +29,30 @@ namespace MegaDesk
             var mainMenu = (MainMenu)Tag;
             mainMenu.Show();
             Close();
+        }
+        private void loadGrid()
+        {
+            try
+            {
+                string[] deskQuotes = File.ReadAllLines(@"OrderDetail.txt");
+
+                foreach (string deskQuote in deskQuotes)
+                {
+                    string[] arrRow = deskQuote.Split(new char[] { ',' });
+                    quoteGrid.Rows.Add(arrRow);
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("No file is found!");
+            }
+
+        }
+
+        private void DisplayQuote_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
         }
     }
 }
