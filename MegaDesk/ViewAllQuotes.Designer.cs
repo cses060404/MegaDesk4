@@ -33,12 +33,14 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.searchCombo = new System.Windows.Forms.ComboBox();
             this.searchBox = new System.Windows.Forms.Label();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RushDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SurfaceMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumDrawer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableDepth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.quoteSearchGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -59,12 +61,14 @@
             this.quoteSearchGrid.AllowUserToAddRows = false;
             this.quoteSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.quoteSearchGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Time,
             this.CustomerName,
             this.RushDay,
             this.SurfaceMaterial,
             this.NumDrawer,
             this.TableWidth,
-            this.TableDepth});
+            this.TableDepth,
+            this.TotalPrice});
             this.quoteSearchGrid.Location = new System.Drawing.Point(12, 111);
             this.quoteSearchGrid.Name = "quoteSearchGrid";
             this.quoteSearchGrid.RowTemplate.Height = 24;
@@ -109,6 +113,11 @@
             this.searchBox.TabIndex = 19;
             this.searchBox.Text = "Search: ";
             // 
+            // Time
+            // 
+            this.Time.HeaderText = "Time";
+            this.Time.Name = "Time";
+            // 
             // CustomerName
             // 
             this.CustomerName.HeaderText = "Customer Name";
@@ -139,6 +148,11 @@
             this.TableDepth.HeaderText = "Table Depth";
             this.TableDepth.Name = "TableDepth";
             // 
+            // TotalPrice
+            // 
+            this.TotalPrice.HeaderText = "Price";
+            this.TotalPrice.Name = "TotalPrice";
+            // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,11 +180,13 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox searchCombo;
         private System.Windows.Forms.Label searchBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn RushDay;
         private System.Windows.Forms.DataGridViewTextBoxColumn SurfaceMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumDrawer;
         private System.Windows.Forms.DataGridViewTextBoxColumn TableWidth;
         private System.Windows.Forms.DataGridViewTextBoxColumn TableDepth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
     }
 }

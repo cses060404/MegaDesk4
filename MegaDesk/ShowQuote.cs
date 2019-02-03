@@ -43,11 +43,18 @@ namespace MegaDesk
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            string quoteDetail = nameBox.Text + ", " + rushBox.Text + ", "
-                + materialBox.Text + ", " + drawerBox.Text + ", "+ depthBox.Text + ", " + widthBox.Text + Environment.NewLine;
+            DateTime time = DateTime.Now;
+            try
+            {
+                string quoteDetail = time + ", " + nameBox.Text + ", " + rushBox.Text + ", "
+                    + materialBox.Text + ", " + drawerBox.Text + ", " + widthBox.Text + ", " + depthBox.Text + ", " + priceBox.Text + Environment.NewLine;
 
-            File.AppendAllText("OrderDetail.txt",quoteDetail);
-
+                File.AppendAllText(@"OrderDetail.txt", quoteDetail);
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("File creation failed!");
+            }
             var addQuoteView = (AddQuote)Tag;
             addQuoteView.Close();
             Close();

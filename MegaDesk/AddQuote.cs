@@ -57,14 +57,12 @@ namespace MegaDesk
 
                 newQuote.CalCost();
 
-
-
                 ShowQuote addNewQuoteForm = new ShowQuote(newQuote);
                 addNewQuoteForm.Tag = this;
                 addNewQuoteForm.Show(this);
                 Hide();
             }
-            else MessageBox.Show("Please enter everything!");
+            else MessageBox.Show("Please enter all valuesf!");
                 
         }
 

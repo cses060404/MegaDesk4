@@ -30,12 +30,14 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.quoteGrid = new System.Windows.Forms.DataGridView();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RushDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SurfaceMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumDrawer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableDepth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.quoteGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,19 +54,27 @@
             // 
             // quoteGrid
             // 
+            this.quoteGrid.AllowUserToAddRows = false;
             this.quoteGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.quoteGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Time,
             this.CustomerName,
             this.RushDay,
             this.SurfaceMaterial,
             this.NumDrawer,
             this.TableWidth,
-            this.TableDepth});
+            this.TableDepth,
+            this.Price});
             this.quoteGrid.Location = new System.Drawing.Point(12, 30);
             this.quoteGrid.Name = "quoteGrid";
             this.quoteGrid.RowTemplate.Height = 24;
             this.quoteGrid.Size = new System.Drawing.Size(776, 150);
             this.quoteGrid.TabIndex = 5;
+            // 
+            // Time
+            // 
+            this.Time.HeaderText = "Time";
+            this.Time.Name = "Time";
             // 
             // CustomerName
             // 
@@ -96,6 +106,11 @@
             this.TableDepth.HeaderText = "Table Depth";
             this.TableDepth.Name = "TableDepth";
             // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -116,11 +131,13 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView quoteGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn RushDay;
         private System.Windows.Forms.DataGridViewTextBoxColumn SurfaceMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumDrawer;
         private System.Windows.Forms.DataGridViewTextBoxColumn TableWidth;
         private System.Windows.Forms.DataGridViewTextBoxColumn TableDepth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

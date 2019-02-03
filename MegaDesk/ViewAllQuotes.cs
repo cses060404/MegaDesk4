@@ -31,7 +31,7 @@ namespace MegaDesk
         private void loadGrid() {
             try
             {
-                deskQuotes = File.ReadAllLines(@"OrderDetail.txt");
+                deskQuotes = File.ReadAllLines(@"quotes.txt");
 
                 foreach (string deskQuote in deskQuotes)
                 {
@@ -49,7 +49,7 @@ namespace MegaDesk
         private void searchCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             quoteSearchGrid.Rows.Clear();
-            deskQuotes = File.ReadAllLines(@"OrderDetail.txt");
+           // deskQuotes = File.ReadAllLines(@"OrderDetail.txt");
 
 
             foreach (string deskQuote in deskQuotes) { 
